@@ -1,0 +1,17 @@
+name: lambdarequesttransformer
+displayName: Lambda Request Transformer
+type: middleware
+
+import: github.com/pavankumar0143/traefik-lambdarequesttransformer
+
+summary: Parse HTTP request and convert it to Lambda request 2.0 event. Only supports POST requests in local environment.
+description: >
+  This plugin parses the HTTP request and converts it to a Lambda request 2.0 event object with requestContext.authorizer.lambda. 
+  Only supports lambda running in local environment. For local development, this plugin is required to be used in conjunction with httplambdaauth plugin.
+
+testData:
+  request:
+    method: GET
+    path: /test
+  expected:
+    method: POST
