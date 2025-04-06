@@ -1,4 +1,4 @@
-package lambdarequesttransformer
+package traefik_lambdarequesttransformer
 
 import (
 	"context"
